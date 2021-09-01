@@ -1,0 +1,76 @@
+{
+    "name": "lidyapos/platform",
+    "description": "The LidyaPos Platform based on Laravel Framework.",
+    "keywords": [
+        "lidyapos",
+        "lidyapos cms",
+        "lidyapos platform"
+    ],
+    "homepage": "https://lidyapos.com",
+
+    "authors": [
+        {
+            "name": "LidyaPos",
+            "email": "info@lidyapos.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "barryvdh/laravel-dompdf": "^0.9.0",
+        "lidyapos/assets": "^1.0",
+        "intervention/image": "^2.4",
+        "kris/laravel-form-builder": "1.16.x-dev",
+        "laravelcollective/html": "^6.1",
+        "xantios/mimey": "^2.1",
+        "tightenco/ziggy": "^1.0",
+        "yajra/laravel-datatables-buttons": "^4.9",
+        "yajra/laravel-datatables-oracle": "^9.9",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "mews/purifier": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "LidyaPos\\Support\\": "support/src",
+            "LidyaPos\\ACL\\": "acl/src",
+            "LidyaPos\\Base\\": "base/src",
+            "LidyaPos\\Dashboard\\": "dashboard/src",
+            "LidyaPos\\Media\\": "media/src",
+            "LidyaPos\\Setting\\": "setting/src",
+            "LidyaPos\\Table\\": "table/src",
+            "LidyaPos\\JsValidation\\": "js-validation/src",
+            "LidyaPos\\Chart\\": "chart/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LidyaPos\\Base\\Providers\\BaseServiceProvider",
+                "LidyaPos\\Base\\Providers\\CommandServiceProvider",
+                "LidyaPos\\Base\\Providers\\EventServiceProvider",
+                "LidyaPos\\Base\\Providers\\BreadcrumbsServiceProvider",
+                "LidyaPos\\Base\\Providers\\ComposerServiceProvider",
+                "LidyaPos\\Base\\Providers\\MailConfigServiceProvider",
+                "LidyaPos\\Base\\Providers\\FormServiceProvider",
+                "LidyaPos\\Support\\Providers\\SupportServiceProvider",
+                "LidyaPos\\Table\\Providers\\TableServiceProvider",
+                "LidyaPos\\ACL\\Providers\\AclServiceProvider",
+                "LidyaPos\\Dashboard\\Providers\\DashboardServiceProvider",
+                "LidyaPos\\Media\\Providers\\MediaServiceProvider",
+                "LidyaPos\\JsValidation\\Providers\\JsValidationServiceProvider",
+                "LidyaPos\\Chart\\Providers\\ChartServiceProvider"
+            ],
+            "aliases": {
+                "Assets": "LidyaPos\\Base\\Facades\\AssetsFacade",
+                "BaseHelper": "LidyaPos\\Base\\Facades\\BaseHelperFacade",
+                "MetaBox": "LidyaPos\\Base\\Facades\\MetaBoxFacade",
+                "Action": "LidyaPos\\Base\\Facades\\ActionFacade",
+                "Filter": "LidyaPos\\Base\\Facades\\FilterFacade",
+                "EmailHandler": "LidyaPos\\Base\\Facades\\EmailHandlerFacade",
+                "Breadcrumbs": "LidyaPos\\Base\\Facades\\BreadcrumbsFacade",
+                "JsValidator": "LidyaPos\\JsValidation\\Facades\\JsValidatorFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
