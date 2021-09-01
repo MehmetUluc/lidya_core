@@ -105,7 +105,7 @@ if (!function_exists('platform_path')) {
      */
     function platform_path($path = null): string
     {
-        return base_path('platform/' . $path);
+        return base_path('lidyacore/' . $path);
     }
 }
 
